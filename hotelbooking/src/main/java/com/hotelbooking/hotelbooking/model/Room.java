@@ -1,6 +1,7 @@
 package com.hotelbooking.hotelbooking.model;
 
 import java.math.BigDecimal;
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -43,6 +45,8 @@ public class Room {
 
     private boolean isBooked = false;
 
+    @Lob
+    private Blob photo;
 
     // One-to-many relationship with BookedRoom entity
     // FetchType.LAZY - Loads bookings only when accessed
