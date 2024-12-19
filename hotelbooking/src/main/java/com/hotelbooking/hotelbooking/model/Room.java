@@ -51,7 +51,7 @@ public class Room {
     // One-to-many relationship with BookedRoom entity
     // FetchType.LAZY - Loads bookings only when accessed
     // CascadeType.ALL - Propagates all changes to associated bookings
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<BookedRoom> bookings;
 
     // Default constructor initializing bookings list
