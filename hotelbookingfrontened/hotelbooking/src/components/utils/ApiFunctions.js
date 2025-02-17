@@ -2,7 +2,7 @@ import axios from "axios"
 
 // Create an instance of axios with a base URL for API calls
 export const api = axios.create({
-    baseURL: "https://localhost:9192",
+    baseURL: "https://localhost:5173",
 })
 
 // Function to add a new room to the database
