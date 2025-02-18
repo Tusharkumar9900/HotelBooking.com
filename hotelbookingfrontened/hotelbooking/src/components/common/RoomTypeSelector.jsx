@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getRoomTypes } from '../utils/ApiFunctions'
 
-// // Define the RoomTypeSelector component, receiving props for handling input changes and new room data  
+// Define the RoomTypeSelector component, receiving props for handling input changes and new room data  
 const RoomTypeSelector = ({handleRoomInputChange, newRoom }) => {
     // State to store the list of available room types, initialized with an empty string  
     const[roomTypes, setRoomTypes] = useState([""])
