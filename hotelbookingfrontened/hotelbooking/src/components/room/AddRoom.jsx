@@ -62,6 +62,11 @@ const handleSubmit = async(e) =>{
     setErrorMessage(error.message) // Set error message if request fails
    }
 
+   setTimeout(() => {
+    setSuccessMessage("") // Clear success message after 5 seconds
+    setErrorMessage("") // Clear error message after 5 seconds
+    }, 3000);
+
 }
 
 return (
@@ -72,6 +77,17 @@ return (
     <div className="col-md-8-lg-6">
        {/* Page title */}
       <h2 className = "mt-5 mb-2">Add New Room </h2>
+      {successMessage && (
+        <div className="alert alert-success fade show" role="alert">
+          {successMessage}
+        </div>
+      )}
+
+{errorMessage && (
+        <div className="alert alert-danger fade show" role="alert">
+          {errorMessage}
+        </div>
+      )}
 
       {/* Room addition form */}
       <form onSubmit ={handleSubmit}>
